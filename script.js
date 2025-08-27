@@ -1,4 +1,3 @@
-
 // ------Heart-----
 
 let clicked = {};
@@ -31,29 +30,26 @@ heartClick("heart-btn7");
 heartClick("heart-btn8");
 heartClick("heart-btn9");
 
-
 // -----call------
 
-document.getElementById("call-btn1").addEventListener('click',function(){
-    let coin=parseInt(document.getElementById("coin-number").innerText);
-    updatedCoin=coin-20;
-    
-    if(updatedCoin<20){
-        alert("Insufficient Coin");
-        return;
-    }
-    
-    document.getElementById("coin-number").innerText=updatedCoin;
+document.getElementById("call-btn1").addEventListener("click", function () {
+  let coin = parseInt(document.getElementById("coin-number").innerText);
+  updatedCoin = coin - 20;
 
-    const forAlert1=document.getElementById("national-emergency-number").innerText;
-    const forAlert2=document.getElementById("national-emergency-number-call").innerText;
-    alert(forAlert1+ " is : " + forAlert2)
-    
-    
-})
+  if (updatedCoin < 20) {
+    alert("Insufficient Coin");
+    return;
+  }
 
+  document.getElementById("coin-number").innerText = updatedCoin;
 
+  alerted("national-emergency-number","national-emergency-number-call")
 
+});
 
-
-
+function alerted(id1,id2) {
+  const forAlert1 = document.getElementById(id1).innerText;
+  const forAlert2 = document.getElementById(id2).innerText;
+  alert(forAlert1 + " is : " + forAlert2);
+  return;
+}
