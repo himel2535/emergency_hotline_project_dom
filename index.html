@@ -74,7 +74,7 @@
           <div
             class="flex items-center justify-center gap-2 w-[80px] md:w-[120px] h-[52px] rounded-3xl bg-[#41ff6b1a]"
           >
-            <p class="inter font-bold">100</p>
+            <p id="coin-number" class="inter font-bold">100</p>
             <img class="w-[20px] h-[22px]" src="assets/coin.png" alt="" />
           </div>
         </div>
@@ -82,7 +82,7 @@
           <div
             class="flex items-center justify-center gap-2 w-[80px] md:w-[120px] h-[52px] rounded-3xl bg-[#00a63e] text-white font-semibold"
           >
-            <p><span>2</span> Copy</p>
+            <p><span id="copy-number">0</span> Copy</p>
           </div>
         </div>
       </div>
@@ -133,22 +133,23 @@
                 <i  id="heart-btn"  class="fa-regular fa-heart"></i>
               </div>
             </div>
-            <h1 class="font-bold text-[18px]">National Emergency Number</h1>
+            <h1 id="national-emergency-number" class="font-bold text-[18px]">National Emergency Number</h1>
             <p class="roboto text-[#5c5c5c]">National Emergency</p>
-            <h1 class="inter font-bold text-[22px] mt-2">999</h1>
+            <h1 id="national-emergency-number-call" class="inter font-bold text-[22px] mt-2">999</h1>
             <div
               class="bg-[#F2F2F2] rounded-3xl h-[30px] w-[50px] text-center flex justify-center items-center mb-4"
             >
               <p class="text-[#5c5c5c]">All</p>
             </div>
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn1"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn1"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -169,22 +170,24 @@
                 <i id="heart-btn2" class="fa-regular fa-heart"></i>
               </div>
             </div>
-            <h1 class="font-bold text-[18px]">Police Helpline Number</h1>
+            <h1 id="police-helpline-number" class="font-bold text-[18px]">Police Helpline Number</h1>
             <p class="roboto text-[#5c5c5c]">Police</p>
-            <h1 class="inter font-bold text-[22px] mt-2">999</h1>
+            <h1 id="police-helpline-number-call" class="inter font-bold text-[22px] mt-2">999</h1>
             <div
               class="bg-[#F2F2F2] rounded-3xl h-[30px] w-[70px] text-center flex justify-center items-center mb-4"
             >
               <p class="text-[#5c5c5c]">Police</p>
             </div>
+
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn2"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn2"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -217,14 +220,15 @@
             >
               <p class="text-[#5c5c5c]">Fire</p>
             </div>
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn3"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn3"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -257,14 +261,16 @@
             >
               <p class="text-[#5c5c5c]">Health</p>
             </div>
+
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn4"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn4"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -297,14 +303,15 @@
             >
               <p class="text-[#5c5c5c]">Help</p>
             </div>
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn5"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn5"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -337,14 +344,15 @@
             >
               <p class="text-[#5c5c5c]">Govt.</p>
             </div>
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn6"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn6"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -377,14 +385,15 @@
             >
               <p class="text-[#5c5c5c]">Electricity</p>
             </div>
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn7"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn7"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -417,14 +426,15 @@
             >
               <p class="text-[#5c5c5c]">NGO</p>
             </div>
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn8"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn8"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>
@@ -457,14 +467,15 @@
             >
               <p class="text-[#5c5c5c]">Travel</p>
             </div>
+            <!-- copy and call btn -->
             <div class="flex gap-1">
-              <button
+              <button id="copy-btn9"
                 class="btn rounded-[8px] btn-xs w-1/2 text-[#5c5c5c] h-[30px]"
               >
                 <i class="fa-regular fa-copy rotate-90"></i>
                 <span>Copy</span>
               </button>
-              <button
+              <button id="call-btn9"
                 class="btn rounded-[8px] btn-xs w-1/2 text-white bg-[#00a63e] h-[30px]"
               >
                 <i class="fa-solid fa-phone mb-1"></i><span>Call</span>

@@ -1,3 +1,6 @@
+
+// ------Heart-----
+
 let clicked = {};
 function heartClick(id) {
   const btn = document.getElementById(id);
@@ -27,3 +30,30 @@ heartClick("heart-btn6");
 heartClick("heart-btn7");
 heartClick("heart-btn8");
 heartClick("heart-btn9");
+
+
+// -----call------
+
+document.getElementById("call-btn1").addEventListener('click',function(){
+    let coin=parseInt(document.getElementById("coin-number").innerText);
+    updatedCoin=coin-20;
+    
+    if(updatedCoin<20){
+        alert("Insufficient Coin");
+        return;
+    }
+    
+    document.getElementById("coin-number").innerText=updatedCoin;
+
+    const forAlert1=document.getElementById("national-emergency-number").innerText;
+    const forAlert2=document.getElementById("national-emergency-number-call").innerText;
+    alert(forAlert1+ " is : " + forAlert2)
+    
+    
+})
+
+
+
+
+
+
