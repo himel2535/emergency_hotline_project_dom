@@ -91,7 +91,8 @@ function forCall(id, id1, id2,id3,id4) {
     // -------for clear ----
 
     document.getElementById("clear-btn").addEventListener('click',function(){
-      document.getElementById("call-history-container").removeChild
+      callHistoryData.length=0;
+      document.getElementById("call-history-container").innerText="";
     })
   });
 }
