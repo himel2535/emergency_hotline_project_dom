@@ -30,6 +30,15 @@ heartClick("heart-btn7");
 heartClick("heart-btn8");
 heartClick("heart-btn9");
 
+
+// ---function for alert
+function alerted(id1, id2) {
+  const forAlert1 = document.getElementById(id1).innerText;
+  const forAlert2 = document.getElementById(id2).innerText;
+  alert(forAlert1 + " is : " + forAlert2);
+  return;
+}
+
 // -----call------
 function forCall(id, id1, id2) {
   document.getElementById(id).addEventListener("click", function () {
@@ -69,9 +78,21 @@ forCall(
   "bangladesh-railway-helpline-call"
 );
 
-function alerted(id1, id2) {
-  const forAlert1 = document.getElementById(id1).innerText;
-  const forAlert2 = document.getElementById(id2).innerText;
-  alert(forAlert1 + " is : " + forAlert2);
-  return;
-}
+
+
+// ---copy -----
+
+document.getElementById("copy-btn1").addEventListener('click',function(){
+  // increasing count of copy
+  let copyCount = parseInt(document.getElementById("copy-number").innerText);
+  updatedCopyCount=copyCount+1;
+  document.getElementById("copy-number").innerText=updatedCopyCount;
+
+  // ----copy the number----
+  let copyText=document.getElementById("national-emergency-number-call").innerText;
+  navigator.clipboard.writeText(copyText)
+    alert("The number has been Copied- " + copyText)
+ 
+})
+
+
