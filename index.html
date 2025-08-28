@@ -48,23 +48,23 @@
   </head>
   <body class="hind-madurai">
     <!-- Navbar Part -->
-    <section class="navbar w-full flex justify-between py-4">
+    <section class="navbar w-full flex flex-col md:flex-row justify-between py-4">
       <div
-        class="flex flex-col md:flex-row text-center md:text-left justify-center gap-1 md:gap-5 items-center ml-[10px] md:ml-[60px]"
+        class="flex flex-col md:flex-row text-center md:text-left justify-center  md:gap-5 items-center md:ml-[60px]"
       >
-        <div>
-          <img class="h-[50px] w-[50px]" src="assets/logo.png" alt="" />
+        <div >
+          <img class="h-[50px] w-[50px] " src="assets/logo.png" alt="" />
         </div>
-        <h1 class="text-[#006747] font-black text-bs md:text-xl inter">
-          Emergency <br />Service
+        <h1 class="text-[#006747] font-black text-xl inter">
+          Emergency <br class="hidden md:block" />Service
         </h1>
       </div>
 
-      <div class="flex gap-2 md:gap-5 mr-[10px] md:mr-[60px]">
+      <div class="flex gap-5 md:gap-5 md:mr-[60px] md:mt-0 mt-2">
         <!-- heart part -->
         <div>
           <div
-            class="flex items-center justify-center gap-2 w-[80px] md:w-[120px] h-[52px] rounded-3xl bg-[#41ff6b1a]"
+            class="flex items-center justify-center gap-2 md:w-[120px] w-[100px] h-[52px] rounded-3xl bg-[#41ff6b1a]"
           >
             <p id="heart-number" class="inter font-bold">0</p>
             <img class="w-[20px] h-[22px]" src="assets/heart.png" alt="" />
@@ -73,7 +73,7 @@
         <!-- coin part -->
         <div>   
           <div
-            class="flex items-center justify-center gap-2 w-[80px] md:w-[120px] h-[52px] rounded-3xl bg-[#41ff6b1a]"
+            class="flex items-center justify-center gap-2 w-[100px] md:w-[120px] h-[52px] rounded-3xl bg-[#41ff6b1a]"
           >
             <p id="coin-number" class="inter font-bold">100</p>
             <img class="w-[20px] h-[22px]" src="assets/coin.png" alt="" />
@@ -82,7 +82,7 @@
         <!-- copy part -->
         <div>
           <div
-            class="flex items-center justify-center gap-2 w-[80px] md:w-[120px] h-[52px] rounded-3xl bg-[#00a63e] text-white font-semibold"
+            class="flex items-center justify-center gap-2 w-[100px] md:w-[120px] h-[52px] rounded-3xl bg-[#00a63e] text-white font-semibold"
           >
             <p><span id="copy-number">0</span> Copy</p>
           </div>
