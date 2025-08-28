@@ -30,7 +30,6 @@ heartClick("heart-btn7");
 heartClick("heart-btn8");
 heartClick("heart-btn9");
 
-
 // ---function for alert
 function alerted(id1, id2) {
   const forAlert1 = document.getElementById(id1).innerText;
@@ -78,21 +77,31 @@ forCall(
   "bangladesh-railway-helpline-call"
 );
 
-
-
 // ---copy -----
 
-document.getElementById("copy-btn1").addEventListener('click',function(){
-  // increasing count of copy
-  let copyCount = parseInt(document.getElementById("copy-number").innerText);
-  updatedCopyCount=copyCount+1;
-  document.getElementById("copy-number").innerText=updatedCopyCount;
+function forCopy(id1,id2,id3) {
+  document.getElementById(id1).addEventListener("click", function () {
+    // increasing count of copy
+    let copyCount = parseInt(document.getElementById("copy-number").innerText);
+    updatedCopyCount = copyCount + 1;
+    document.getElementById("copy-number").innerText = updatedCopyCount;
 
-  // ----copy the number----
-  let copyText=document.getElementById("national-emergency-number-call").innerText;
-  navigator.clipboard.writeText(copyText)
-    alert("The number has been Copied- " + copyText)
- 
-})
-
+    // ----copy the number----
+    let copyText = document.getElementById(id3).innerText;
+    let copyName = document.getElementById(id2).innerText;
+    navigator.clipboard.writeText(copyText);
+    alert("The number of "+ copyName +" has been Copied : " + copyText);
+  });
+  return;
+  
+}
+forCopy("copy-btn1","national-emergency-number","national-emergency-number-call");
+forCopy("copy-btn2","police-helpline-number","police-helpline-number-call");
+forCopy("copy-btn3","fire-service-number","fire-service-number-call");
+forCopy("copy-btn4","ambulance-service","ambulance-service-call");
+forCopy("copy-btn5","women&child-helpline","women&child-helpline-call");
+forCopy("copy-btn6","anti-corruption-helpline","anti-corruption-helpline-call");
+forCopy("copy-btn7","electricity-helpline","electricity-helpline-call");
+forCopy("copy-btn8","brac-helpline","brac-helpline-call");
+forCopy("copy-btn9","bangladesh-railway-helpline","bangladesh-railway-helpline-call");
 
