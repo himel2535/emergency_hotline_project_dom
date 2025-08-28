@@ -31,6 +31,7 @@ heartClick("heart-btn8");
 heartClick("heart-btn9");
 
 // ---function for alert
+
 function alerted(id1, id2) {
   const forAlert1 = document.getElementById(id1).innerText;
   const forAlert2 = document.getElementById(id2).innerText;
@@ -38,8 +39,11 @@ function alerted(id1, id2) {
   return;
 }
 
-// -----call------
-function forCall(id, id1, id2) {
+// --------------call---------------
+
+const callHistoryData = [];
+
+function forCall(id, id1, id2,id3,id4) {
   document.getElementById(id).addEventListener("click", function () {
     let coin = parseInt(document.getElementById("coin-number").innerText);
     updatedCoin = coin - 20;
@@ -52,13 +56,50 @@ function forCall(id, id1, id2) {
     document.getElementById("coin-number").innerText = updatedCoin;
 
     alerted(id1, id2);
+
+
+    // ----------for call history---------->
+
+    const historyData = {
+      name: document.getElementById(id1).innerText,
+      number: document.getElementById(id2).innerText,
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistoryData.push(historyData);
+
+    const callHistoryContainer = document.getElementById(
+      "call-history-container"
+    );
+    callHistoryContainer.innerText=""
+
+    for (const historyData of callHistoryData) {
+      const div = document.createElement("div");
+      div.innerHTML = `
+                <div
+            class=" flex justify-between items-center bg-[#fafafa] mb-4 p-3 rounded-[8px]"
+          >
+            <div>
+              <h1 class="font-[600] inter">${historyData.name}</h1>
+              <p class="text-[#5c5c5c]">${historyData.number}</p>
+            </div>
+            <p>${historyData.date}</p>
+          </div>
+      `
+      callHistoryContainer.appendChild(div)
+    }
+
+    // -------for clear ----
+
+    document.getElementById("clear-btn").addEventListener('click',function(){
+      document.getElementById("call-history-container").removeChild
+    })
   });
 }
 
 forCall(
   "call-btn1",
   "national-emergency-number",
-  "national-emergency-number-call"
+  "national-emergency-number-call","national-emergency-number","national-emergency-number-call"
 );
 forCall("call-btn2", "police-helpline-number", "police-helpline-number-call");
 forCall("call-btn3", "fire-service-number", "fire-service-number-call");
@@ -77,9 +118,9 @@ forCall(
   "bangladesh-railway-helpline-call"
 );
 
-// ---copy -----
+// ---------------Copy Section--------------
 
-function forCopy(id1,id2,id3) {
+function forCopy(id1, id2, id3) {
   document.getElementById(id1).addEventListener("click", function () {
     // increasing count of copy
     let copyCount = parseInt(document.getElementById("copy-number").innerText);
@@ -90,18 +131,30 @@ function forCopy(id1,id2,id3) {
     let copyText = document.getElementById(id3).innerText;
     let copyName = document.getElementById(id2).innerText;
     navigator.clipboard.writeText(copyText);
-    alert("The number of "+ copyName +" has been Copied : " + copyText);
+    alert("The number of " + copyName + " has been Copied : " + copyText);
   });
   return;
-  
 }
-forCopy("copy-btn1","national-emergency-number","national-emergency-number-call");
-forCopy("copy-btn2","police-helpline-number","police-helpline-number-call");
-forCopy("copy-btn3","fire-service-number","fire-service-number-call");
-forCopy("copy-btn4","ambulance-service","ambulance-service-call");
-forCopy("copy-btn5","women&child-helpline","women&child-helpline-call");
-forCopy("copy-btn6","anti-corruption-helpline","anti-corruption-helpline-call");
-forCopy("copy-btn7","electricity-helpline","electricity-helpline-call");
-forCopy("copy-btn8","brac-helpline","brac-helpline-call");
-forCopy("copy-btn9","bangladesh-railway-helpline","bangladesh-railway-helpline-call");
+forCopy(
+  "copy-btn1",
+  "national-emergency-number",
+  "national-emergency-number-call"
+);
+forCopy("copy-btn2", "police-helpline-number", "police-helpline-number-call");
+forCopy("copy-btn3", "fire-service-number", "fire-service-number-call");
+forCopy("copy-btn4", "ambulance-service", "ambulance-service-call");
+forCopy("copy-btn5", "women&child-helpline", "women&child-helpline-call");
+forCopy(
+  "copy-btn6",
+  "anti-corruption-helpline",
+  "anti-corruption-helpline-call"
+);
+forCopy("copy-btn7", "electricity-helpline", "electricity-helpline-call");
+forCopy("copy-btn8", "brac-helpline", "brac-helpline-call");
+forCopy(
+  "copy-btn9",
+  "bangladesh-railway-helpline",
+  "bangladesh-railway-helpline-call"
+);
+
 
