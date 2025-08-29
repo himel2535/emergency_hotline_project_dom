@@ -43,20 +43,22 @@ function alerted(id1, id2) {
 
 const callHistoryData = [];
 
-function forCall(id, id1, id2,id3,id4) {
+function forCall(id, id1, id2) {
   document.getElementById(id).addEventListener("click", function () {
     let coin = parseInt(document.getElementById("coin-number").innerText);
-    updatedCoin = coin - 20;
 
-    if (updatedCoin < 20) {
+    let needCoin = 20;
+    
+    if (coin < needCoin) {
       alert("Insufficient Coin");
       return;
     }
 
+    let updatedCoin = coin - needCoin;
+
     document.getElementById("coin-number").innerText = updatedCoin;
 
     alerted(id1, id2);
-
 
     // ----------for call history---------->
 
@@ -70,7 +72,7 @@ function forCall(id, id1, id2,id3,id4) {
     const callHistoryContainer = document.getElementById(
       "call-history-container"
     );
-    callHistoryContainer.innerText=""
+    callHistoryContainer.innerText = "";
 
     for (const historyData of callHistoryData) {
       const div = document.createElement("div");
@@ -84,23 +86,25 @@ function forCall(id, id1, id2,id3,id4) {
             </div>
             <p>${historyData.date}</p>
           </div>
-      `
-      callHistoryContainer.appendChild(div)
+      `;
+      callHistoryContainer.appendChild(div);
     }
 
     // -------for clear ----
 
-    document.getElementById("clear-btn").addEventListener('click',function(){
-      callHistoryData.length=0;
-      document.getElementById("call-history-container").innerText="";
-    })
+    document.getElementById("clear-btn").addEventListener("click", function () {
+      callHistoryData.length = 0;
+      document.getElementById("call-history-container").innerText = "";
+    });
   });
 }
 
 forCall(
   "call-btn1",
   "national-emergency-number",
-  "national-emergency-number-call","national-emergency-number","national-emergency-number-call"
+  "national-emergency-number-call",
+  "national-emergency-number",
+  "national-emergency-number-call"
 );
 forCall("call-btn2", "police-helpline-number", "police-helpline-number-call");
 forCall("call-btn3", "fire-service-number", "fire-service-number-call");
@@ -157,5 +161,3 @@ forCopy(
   "bangladesh-railway-helpline",
   "bangladesh-railway-helpline-call"
 );
-
-
